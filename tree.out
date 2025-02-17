@@ -1,0 +1,47 @@
+.
+├── index.html
+├── package-lock.json
+├── package.json
+├── public
+│   ├── blog.json
+│   └── vite.svg
+├── src
+│   ├── App.tsx
+│   ├── assets
+│   │   └── react.svg
+│   ├── components
+│   │   ├── About
+│   │   │   ├── AboutInfo.tsx
+│   │   │   └── _about.scss
+│   │   ├── Blog
+│   │   │   ├── BlogPost.tsx
+│   │   │   └── _blog.scss
+│   │   ├── Hero
+│   │   │   └── Hero.tsx
+│   │   ├── Navbar
+│   │   │   ├── Navbar.tsx
+│   │   │   ├── SiteSearch.tsx
+│   │   │   ├── ThemeSwitch.tsx
+│   │   │   └── _navbar.scss
+│   │   └── Projects
+│   │       ├── Project.tsx
+│   │       └── _project.scss
+│   ├── hooks
+│   │   └── hookScrollDirection.tsx
+│   ├── main.tsx
+│   ├── pages
+│   │   ├── About.tsx
+│   │   ├── BlogRoll.tsx
+│   │   ├── Landing.tsx
+│   │   ├── NotFound.tsx
+│   │   ├── ProjectPortfolio.tsx
+│   │   ├── _blogRoll.scss
+│   │   └── _projectPortfolio.scss
+│   └── styles
+│       └── _global.scss
+├── tree.out
+├── tsconfig.json
+├── vite-env.d.ts
+└── vite.config.ts
+
+13 directories, 32 files

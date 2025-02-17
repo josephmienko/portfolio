@@ -1,0 +1,23 @@
+.about-section {
+    max-width: 800px;
+    margin: auto;
+    padding: 40px;
+    text-align: center;
+  
+    h2 {
+      color: var(--bs-primary);
+    }
+  
+    ul {
+      list-style: none;
+      padding: 0;
+  
+      li {
+        background: var(--bs-light);
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 5px;
+      }
+    }
+  }
+  

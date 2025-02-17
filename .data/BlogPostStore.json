@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "Building a Todo App with Vue",
+    "slug": "todo-app-with-vue",
+    "cover": "https://nextjs.org/static/images/learn/foundations/next-app.png",
+    "author": "John Doe",
+    "content": "Learn how to build a powerful Todo app with Vue.js."
+  },
+  {
+    "id": 2,
+    "title": "Getting Started with TypeScript",
+    "slug": "getting-started-typescript",
+    "cover": "https://nextjs.org/static/images/learn/foundations/components.png",
+    "author": "Claman Joe",
+    "content": "An introduction to TypeScript and its powerful features."
+  }
+]
