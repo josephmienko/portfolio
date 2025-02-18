@@ -4,11 +4,12 @@ import { SiteSearch } from "./SiteSearch";
 import { ThemeSwitch } from "./ThemeSwitch";
 import useScrollDirection from "../../hooks/hookScrollDirection";
 import { useConfig } from "../../hooks/useConfig";
+import.meta.env && console.log("Loaded ENV Variables:", import.meta.env);
 import "./_navbar.scss";
 
 export function Navbar() {
   const scrollDirection = useScrollDirection();
-  const { brandName, logoPath, navLinks } = useConfig(); // Get sanitized branding and links
+  const { brandName, logoPath, navLinks } = useConfig(); // Load from env variables
 
   return (
     <nav className={`navbar navbar-expand-lg bg-body-tertiary ${scrollDirection === "down" ? "hide-navbar" : ""}`}>
@@ -16,7 +17,7 @@ export function Navbar() {
         {/* Dynamic Logo and Brand Name */}
         <Link className="navbar-brand d-flex align-items-center" to="/">
           <img src={logoPath} alt="Logo" className="navbar-logo me-2" />
-          {brandName} {/* This is now safe because it was sanitized in useConfig.ts */}
+          {brandName}
         </Link>
 
         <button
@@ -36,7 +37,7 @@ export function Navbar() {
             {navLinks.map((link) => (
               <li className="nav-item" key={link.path}>
                 <Link className="nav-link" to={link.path}>
-                  {link.name} {/* This is now safe because it was sanitized in useConfig.ts */}
+                  {link.name}
                 </Link>
               </li>
             ))}

@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@types/react-router':
+        specifier: ^5.1.20
+        version: 5.1.20
       bootstrap:
         specifier: ^5.3.3
         version: 5.3.3(@popperjs/core@2.11.8)
@@ -17,6 +20,9 @@ importers:
       dompurify:
         specifier: ^3.2.4
         version: 3.2.4
+      dot-env:
+        specifier: ^0.0.1
+        version: 0.0.1
       react:
         specifier: ^19.0.0
         version: 19.0.0
@@ -774,6 +780,9 @@ packages:
 
   dompurify@3.2.4:
     resolution: {integrity: sha512-ysFSFEDVduQpyhzAob/kkuJjf5zWkZD8/A9ywSp1byueyuCfHamrCBa14/Oc2iiB0e51B+NpxSl5gmzn+Ms/mg==}
+
+  dot-env@0.0.1:
+    resolution: {integrity: sha512-SajHtzm3v7yjMH8DW9xY+4i7Zv/cN3aMtLVy0mRMuZu8L9qRCR7CNqcl4KBbG27e5Up4BpSlEyPXXLNbSAe2DQ==}
 
   electron-to-chromium@1.5.101:
     resolution: {integrity: sha512-L0ISiQrP/56Acgu4/i/kfPwWSgrzYZUnQrC0+QPFuhqlLP1Ir7qzPPDVS9BcKIyWTRU8+o6CC8dKw38tSWhYIA==}
@@ -1881,6 +1890,8 @@ snapshots:
   dompurify@3.2.4:
     optionalDependencies:
       '@types/trusted-types': 2.0.7
+
+  dot-env@0.0.1: {}
 
   electron-to-chromium@1.5.101: {}
 

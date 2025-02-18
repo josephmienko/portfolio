@@ -1,6 +1,3 @@
-import { useState, useEffect } from "react";
-import DOMPurify from "dompurify"; // Import DOMPurify for security
-
 type NavLink = {
   name: string;
   path: string;
@@ -12,44 +9,27 @@ type ConfigData = {
   navLinks: NavLink[];
 };
 
-// Move fetch outside of useState to ensure Vite's HMR works correctly
-const fetchConfig = async (): Promise<ConfigData> => {
-  try {
-    const response = await fetch("/profile.config.json");
-    if (!response.ok) {
-      throw new Error(`Failed to fetch config: ${response.statusText}`);
-    }
-    const rawData: ConfigData = await response.json();
+// Load variables from .env
+const brandName = import.meta.env.VITE_BRAND_NAME || "Default Brand";
+const logoPath = import.meta.env.VITE_LOGO_PATH || "/default-logo.png";
 
-    // Sanitize user-controlled content before setting it in state
-    return {
-      brandName: DOMPurify.sanitize(rawData.brandName),
-      logoPath: rawData.logoPath,
-      navLinks: rawData.navLinks.map((link) => ({
-        name: DOMPurify.sanitize(link.name),
-        path: link.path
-      }))
-    };
-  } catch (error) {
-    console.error("Error loading config:", error);
-    return {
-      brandName: "Error",
-      logoPath: "/vite.svg",
-      navLinks: []
-    };
-  }
-};
+// Ensure non-null, non-empty string before splitting
+const rawNavNames: string = import.meta.env.VITE_NAV_LINK_NAMES || "";
+const rawNavPaths: string = import.meta.env.VITE_NAV_LINK_PATHS || "";
 
-export function useConfig() {
-  const [config, setConfig] = useState<ConfigData>({
-    brandName: "Loading...",
-    logoPath: "/vite.svg",
-    navLinks: []
-  });
+// Convert comma-separated strings to arrays
+const navNames: string[] = rawNavNames.split(",").map((n) => n.trim());
+const navPaths: string[] = rawNavPaths.split(",").map((p) => p.trim());
 
-  useEffect(() => {
-    fetchConfig().then(setConfig);
-  }, []);
+// Ensure both arrays have the same length before constructing JSON
+const navLinks: NavLink[] = navNames.map((name: string, index: number): NavLink => ({
+  name,
+  path: navPaths[index] || "#", // Default to "#" if missing
+}));
 
-  return config;
+// Log to verify correct parsing
+console.log("Parsed Navbar Config:", { brandName, logoPath, navLinks });
+
+export function useConfig(): ConfigData {
+  return { brandName, logoPath, navLinks };
 }
