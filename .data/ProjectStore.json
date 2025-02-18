@@ -3,35 +3,35 @@
       "id": 1,
       "title": "E-commerce Web App",
       "description": "A fully functional e-commerce platform with Stripe payments, user authentication, and an admin dashboard.",
-      "image": "https://picsum.photos/200",
+      "image": "https://picsum.photos/720/454",
       "link": "https://example.com/ecommerce"
     },
     {
       "id": 2,
       "title": "Personal Portfolio",
       "description": "A sleek and modern portfolio site built with React and TypeScript, featuring a blog and project showcase.",
-      "image": "https://picsum.photos/200",
+      "image": "https://picsum.photos/720/454",
       "link": "https://example.com/portfolio"
     },
     {
       "id": 3,
       "title": "Task Manager App",
       "description": "A task management app with drag-and-drop functionality, notifications, and collaborative features.",
-      "image": "/projects/task-manager.png",
+      "image": "https://picsum.photos/720/454",
       "link": "https://example.com/task-manager"
     },
     {
       "id": 4,
       "title": "AI Chatbot",
       "description": "An AI-powered chatbot that integrates with OpenAI's GPT API to provide conversational AI support.",
-      "image": "/projects/ai-chatbot.png",
+      "image": "https://picsum.photos/720/454",
       "link": "https://example.com/ai-chatbot"
     },
     {
       "id": 5,
       "title": "Weather App",
       "description": "A simple weather app that fetches real-time weather data and provides forecasts for any location.",
-      "image": "/projects/weather-app.png",
+      "image": "https://picsum.photos/720/454",
       "link": "https://example.com/weather",
     "slug": "my-second-project"
     },
@@ -39,7 +39,7 @@
       "id": 6,
       "title": "Blog CMS",
       "description": "A headless CMS for blogging, allowing authors to manage posts via a custom dashboard.",
-      "image": "/projects/blog-cms.png",
+      "image": "https://picsum.photos/720/454",
       "link": "https://example.com/blog-cms",
       "slug": "my-first-project"
     }
