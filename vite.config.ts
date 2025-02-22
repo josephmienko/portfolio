@@ -3,15 +3,13 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 
 export default defineConfig(({ mode }) => {
-  // Explicitly load the correct `.env` file
   const env = loadEnv(mode, process.cwd(), "VITE_");
 
-  console.log(`Loaded Vite Env for mode: ${mode}`, env); // Debugging
-
   return {
+    base: "/",  // Ensure it serves from root, no unwanted paths
     plugins: [react()],
     define: {
-      "process.env": env, // Ensures Vite reads environment variables
+      "process.env": env,
     },
     resolve: {
       alias: {
@@ -25,11 +23,10 @@ export default defineConfig(({ mode }) => {
     server: {
       strictPort: true,
       hmr: true,
-      port: 8080,
+      port: 5454,
     },
-    json: {
-      namedExports: true, // Allow JSON files to be used directly
-      stringify: true, // Ensure JSON is served as text
+    build: {
+      outDir: "dist",
     },
   };
 });

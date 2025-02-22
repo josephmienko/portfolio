@@ -1,23 +1,24 @@
 import React from "react";
-import "./_project.scss";
 
-type ProjectProps = {
+export type ProjectProps = {
   id: number;
   title: string;
   description: string;
   image: string;
   link: string;
   slug: string;
+  index?: number; // <-- Add index as an optional prop
 };
 
-export function Project({ title, description, image, link, slug }: ProjectProps) {
+
+export function Project({ id, title, description, image, link, slug }: ProjectProps) {
   return (
-    <div className="project-card">
-      <img src={image} alt={title} className="project-image" />
-      <div className="project-content">
-        <h3>{title}</h3>
-        <p>{description}</p>
-        <a href={`/projects/${slug}`} className="btn btn-outline-primary">
+    <div className="card shadow-sm">
+      <img src={image} className="card-img-top" alt={title} />
+      <div className="card-body">
+        <h5 className="card-title">{title}</h5>
+        <p className="card-text">{description}</p>
+        <a href={link} className="btn btn-primary">
           View Project
         </a>
       </div>
