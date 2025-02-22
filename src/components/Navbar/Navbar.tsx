@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import { SiteSearch } from "./SiteSearch";
 import { ThemeSwitch } from "./ThemeSwitch";
 import useScrollDirection from "../../hooks/hookScrollDirection";
@@ -12,7 +12,7 @@ export function Navbar() {
   const { brandName, logoPath, navLinks } = useConfig(); // Load from env variables
 
   return (
-    <nav className={`navbar navbar-expand-lg bg-body-tertiary ${scrollDirection === "down" ? "hide-navbar" : ""}`}>
+    <nav className={`navbar navbar-expand-lg bg-body-tertiary border-bottom ${scrollDirection === "down" ? "hide-navbar" : ""}`}>
       <div className="container-fluid">
         {/* Dynamic Logo and Brand Name */}
         <Link className="navbar-brand d-flex align-items-center" to="/">
