@@ -1,12 +1,13 @@
-import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap first
-import "bootstrap/dist/js/bootstrap.bundle.min.js"; // Ensure Bootstrap JS is included
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
-import "./styles/_global.scss"; // Ensure global styles are imported
+import { BrowserRouter } from "react-router-dom";
+import { App } from "./App";
+import "./styles/main.scss";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";  // ✅ Import Bootstrap JS
 
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-  <React.StrictMode>
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <BrowserRouter>
     <App />
-  </React.StrictMode>
+  </BrowserRouter>
 );
