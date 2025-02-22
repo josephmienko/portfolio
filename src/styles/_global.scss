@@ -1,7 +1,93 @@
-// Import Bootstrap’s SCSS
-@import 'bootstrap/scss/bootstrap';
+/* GLOBAL STYLES */
 
-// Add your own global styles below
-body {
-  font-family: Arial, sans-serif;
-}
+@import "./variables";
+@import "./variables-dark";
+@import "./functions";
+@import "./mixins";
+
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Apply global body styles */
+  body {
+    font-family: var(--bs-body-font-family, 'Roboto', sans-serif);
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    line-height: 1.6;
+  }
+  
+  /* Remove default list styles */
+  ul, ol {
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* Default link styling */
+  a {
+    text-decoration: none;
+    color: var(--bs-primary);
+    transition: color 0.3s ease-in-out;
+  }
+  
+  a:hover {
+    color: var(--bs-primary-hover, #ff5733);
+  }
+  
+  /* Global Container Padding */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  /* Spacing Utility */
+  .mt-section {
+    margin-top: 4rem;
+  }
+  
+  .mb-section {
+    margin-bottom: 4rem;
+  }
+  
+  /* Ensure images are responsive */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Fixes for Bootstrap */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+  }
+  
+  /* Buttons */
+  .btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  .btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--bs-primary-hover, #ff5733);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .container {
+      padding: 0 10px;
+    }
+  }
+  
+  .lead {
+
+    font-family: $lead-font-family;
+  
+  }

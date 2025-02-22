@@ -1,0 +1,43 @@
+
+@import "functions";
+@import "variables";
+
+
+@font-face {
+
+    font-family: $heading-font-name; 
+
+    src: url($heading-font-path) format("woff2");
+
+}
+
+
+@font-face {
+  font-family: $body-font-name;
+  src: url($body-font-path-300)  format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: $body-font-name;
+  src: url($body-font-path-400)  format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: $body-font-name;
+  src: url($body-font-path-500)  format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: $body-font-name;
+  src: url($body-font-path-600)  format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: $body-font-name;
+  src: url($body-font-path-700)  format('truetype');
+  font-weight: 700;
+}

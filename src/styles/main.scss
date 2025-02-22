@@ -1,0 +1,18 @@
+// Import Bootstrap functions and variables first
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+// Import your custom variables
+@import "./_color-palette";
+@import "./_variables";
+@import "./_variables-dark";
+@import "./_mixins";
+@import "./_functions";
+@import "./_fonts"; // Ensure fonts are included
+
+// Import Bootstrap core
+@import "bootstrap/scss/bootstrap";
+
+// Your global styles go last
+@import "./_global";
