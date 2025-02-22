@@ -1,21 +1,20 @@
-import { useDataStore } from "../hooks/useDataStore";
+import React from "react";
 import { BlogPost } from "../components/Blog/BlogPost";
+import { Layout } from "../layouts/Layout";
 
-export function BlogRoll() {
-  const blogPosts = useDataStore<{ id: number; title: string; slug: string; cover: string; author: string; content: string }>(
-    "/BlogPostStore.json"
-  );
-
+export function BlogRoll({ blogs }: { blogs: any[] }) {
   return (
-    <div className="container">
-      <h1>Blog Posts</h1>
-      <div className="row">
-        {blogPosts.map((post) => (
-          <div className="col-md-4" key={post.id}>
-            <BlogPost {...post} />
-          </div>
-        ))}
+    <Layout>
+      <div className="container mt-5">
+        <h2 className="text-primary text-center mb-4">Latest Blog Posts</h2>
+        <div className="row">
+          {blogs && blogs.length > 0 ? (
+            blogs.map((blog) => <BlogPost key={blog.id} {...blog} />)
+          ) : (
+            <p>Loading blog posts...</p>
+          )}
+        </div>
       </div>
-    </div>
+    </Layout>
   );
 }
