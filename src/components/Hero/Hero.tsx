@@ -1,5 +1,5 @@
 import React from "react";
-import "./_hero.scss"; // Ensure SCSS styles are applied
+import "../../styles/main.scss"; // Ensure SCSS styles are applied
 
 type HeroProps = {
   title?: string;
